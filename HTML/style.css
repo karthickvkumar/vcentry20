@@ -4,9 +4,12 @@ h1 {
   text-align: center;
   text-decoration: underline;
   text-transform: capitalize;
+  word-spacing: 50px;
+  text-shadow: 2px 2px 5px black;
 }
 
 p{
   text-indent: 64px;
   letter-spacing: 6px;
+  line-height: 1.5;
 }
