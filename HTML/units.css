@@ -20,3 +20,9 @@ div{
   width: 50vw;
   height: 30vh;
 }
+
+.percent{
+  width: 50%;
+  height: 50%;
+  background-color: black;
+}
