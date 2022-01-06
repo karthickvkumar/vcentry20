@@ -1,5 +1,22 @@
+/* Element Selector */
 div{
   width: 500px;
   height: 200px;
   background-color: red;
+}
+
+/* ID Selector */
+#main-heading{
+  color: blue;
+}
+
+.heading{
+  color: white;
+  background-color: blue;
+}
+
+.relative{
+  background-color: blueviolet;
+  width: 50vw;
+  height: 30vh;
 }
