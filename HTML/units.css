@@ -30,15 +30,20 @@ div{
 
 .solid-border{
   border-style: solid;
+  border-width: 2px;
+  border-color: red;
 }
 
 .double-border{ 
   border-style: double;
+  border-width: 5px;
 }
 
 .mixed-border{
   border-top-style: double;
+  border-top-width: 8px;
   border-left-style: solid;
   border-right-style: hidden;
   border-bottom-style: dashed;
+  border-bottom-color: blue;
 }
