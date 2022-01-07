@@ -10,6 +10,7 @@ div{
   color: blue;
 }
 
+/* Class Selector */
 .heading{
   color: white;
   background-color: blue;
@@ -25,4 +26,19 @@ div{
   width: 50%;
   height: 50%;
   background-color: black;
+}
+
+.solid-border{
+  border-style: solid;
+}
+
+.double-border{ 
+  border-style: double;
+}
+
+.mixed-border{
+  border-top-style: double;
+  border-left-style: solid;
+  border-right-style: hidden;
+  border-bottom-style: dashed;
 }
