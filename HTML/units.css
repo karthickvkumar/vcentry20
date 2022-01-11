@@ -36,6 +36,7 @@
   margin: 50px;
   font-size: 50px;
   font-family: 'Lobster', cursive;
+  border-radius: 60px;
 }
 
 .double-border{ 
@@ -92,4 +93,11 @@
 .container{
   display: flex;
   flex-direction: row;
+}
+
+body{
+  /* background-image: url("./shinchu.jpg"); */
+  background-image: url("https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5d35eacaf1176b0008974b54%2F2020-Chevrolet-Corvette-Stingray%2F960x0.jpg%3FcropX1%3D790%26cropX2%3D5350%26cropY1%3D784%26cropY2%3D3349");
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
 }
