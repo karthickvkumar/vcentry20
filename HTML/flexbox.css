@@ -3,10 +3,16 @@
   border: 2px solid black;
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly; /*Align flex item in X-direction */
+  align-items: center; /* Align flex item in Y-direction */
 }
 
 .flex-item{
   width: 100px;
   height: 100px;
   border: 2px solid blue;
+}
+
+.aligSelf{
+  align-self: flex-start;
 }
