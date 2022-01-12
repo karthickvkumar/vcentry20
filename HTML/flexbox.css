@@ -3,6 +3,7 @@
   border: 2px solid black;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-evenly; /*Align flex item in X-direction */
   align-items: center; /* Align flex item in Y-direction */
 }
