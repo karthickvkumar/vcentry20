@@ -1,0 +1,15 @@
+.block-1{
+  height: 34vh;
+  border: 2px solid red;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.block-2{
+  height: 24vh;
+  border: 2px solid red;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
