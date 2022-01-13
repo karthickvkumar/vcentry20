@@ -4,6 +4,8 @@
   margin-top: 10px;
   margin-left: 10px;
   margin-right: 10px;
+  display: flex;
+  flex-direction: row;
 }
 
 .block-2{
@@ -12,4 +14,41 @@
   margin-top: 10px;
   margin-left: 10px;
   margin-right: 10px;
+}
+
+.title-image{
+  border: 2px solid blue;
+  width: 25%;
+}
+
+.title-heading{
+  border: 2px solid blue;
+  width: 75%;
+}
+
+.main-heading{
+  border: 2px solid black;
+  height: 40%;
+  display: flex;
+  flex-direction: row;
+}
+
+.main-sub-heading{
+  border: 2px solid black;
+  height: 57%;
+}
+
+.thumbnail{
+  border: 2px solid red;
+  width: 10%;
+}
+
+.heading{
+  border: 2px solid red;
+  width: 75%;
+}
+
+.date{
+  border: 2px solid red;
+  width: 15%;
 }
