@@ -52,3 +52,38 @@
   border: 2px solid red;
   width: 15%;
 }
+
+.heading-bold{
+  height: 49%;
+  border: 2px solid blue;
+}
+
+.heading-regular{
+  height: 49%;
+  border: 2px solid blue;
+}
+
+.section{
+  border: 2px solid;
+  width: 30%;
+}
+
+.align-evenly{
+  justify-content: space-evenly;
+}
+
+.section-row1{
+  border: 2px solid blue;
+  height: 65%;
+}
+
+.section-row2{
+  border: 2px solid blue;
+  height: 15%;
+  
+}
+
+.section-row3{
+  border: 2px solid blue;
+  height: 15%;
+}
