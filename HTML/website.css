@@ -87,3 +87,19 @@
   border: 2px solid blue;
   height: 15%;
 }
+
+@media only screen and (min-width : 0px) and (max-width : 500px){
+  .section {
+    border: 2px solid;
+    height: 50%;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .block-1 {
+    justify-content: flex-start;
+    height: 88vh;
+    flex-direction: column;
+
+  }
+}
