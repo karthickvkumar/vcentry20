@@ -88,6 +88,10 @@
   height: 15%;
 }
 
+.nav-bg{
+  background-color: #9c27b0 !important;
+}
+
 @media only screen and (min-width : 0px) and (max-width : 500px){
   .section {
     border: 2px solid;
