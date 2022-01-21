@@ -58,3 +58,19 @@ studentInfo.father_name = "Velraj";
 
 // To delete a existing Record -> delete object_variable_name.key
 delete studentInfo.status;
+
+// Array -> It is a collection of List data (List of Data)
+//Syntax of creating an Array
+var variable_name = [ value_1, value_2, ... , Value_n ];
+
+// value -> Number, String, Boolean, Object, Array, Function
+
+var list_of_mark = [70, 64, 94, 88, 45];
+
+var name_list = ["asdfsadf", "reer", "dfbdf", "rtyrh"];
+
+var studentList = [
+  { name : "Karthick", age : 24},
+  {name : "Ak", age : 20},
+  { name : "Yuvi", age : 25}
+];
