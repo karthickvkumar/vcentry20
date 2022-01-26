@@ -238,3 +238,44 @@ function check_even_numbers(){
     }
   }
 }
+
+/*Syntax - for in (loop) - Used to iterate Object properties
+for(var key in object_variable_name){
+ // coding
+}
+*/
+
+function iterateForLoop(){
+  var employee = {
+    first_name : "Karthick",
+    last_name : "kumar",
+    father_name : "Xyz",
+    age : 27,
+    status : true
+  }
+
+  for(var key in employee){
+    // console.log(key);
+    console.log(employee[key])
+  }
+}
+
+/*
+Syntax - for of (loop) - Used to iterate list of Array
+for(var value of array_variable_name){
+ // coding
+}
+*/
+
+function iterateArray(){
+  var studentList = [
+    { name : "Karthick", age : 24},
+    {name : "Ak", age : 20},
+    { name : "Yuvi", age : 25}
+  ];
+
+  for(var value of studentList){
+    console.log(value.name)
+  }
+
+}
