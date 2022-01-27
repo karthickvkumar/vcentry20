@@ -279,3 +279,32 @@ function iterateArray(){
   }
 
 }
+
+/*Syntax - While (loop) - Entry level check
+while(condition){
+ // loop code block
+}
+*/
+
+function whileLoop(){
+  var count = 0;
+  while(count <= 5){
+    console.log("The count is ", count);
+    count = count + 1;
+  }
+}
+
+/*
+Syntax - While (loop) - Exit Level Check
+do{
+ // code block      
+}while(condition)
+*/
+
+function doWhileLoop(){
+  var count = 6;
+  do{
+    console.log("The count is ", count);
+    count = count + 1;
+  }while(count <= 5);
+}
