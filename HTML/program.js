@@ -308,3 +308,33 @@ function doWhileLoop(){
     count = count + 1;
   }while(count <= 5);
 }
+
+/*Syntax - Switch Case
+switch(expression){
+  case value :
+    // code block
+    break;
+  case value :
+    // code block
+    break;
+  default:
+    //code block
+}
+*/
+
+function findDay(){
+  var day = prompt("Enter a number from 0 to 6");
+  switch(day){
+    case "0":
+      console.log("Sunday");
+      break;
+    case "1":
+      console.log("Monday");
+      break;
+    case "2":
+      console.log("Tuesday");
+      break;
+    default:
+      console.log("Out of Range");
+  }
+}
