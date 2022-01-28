@@ -338,3 +338,57 @@ function findDay(){
       console.log("Out of Range");
   }
 }
+
+function display(){
+  // Local Scope - Defning a Variable inside a Function 
+  //Accessibilty - With in the Function
+  var name = "Karthick Kumar";
+  console.log(name);
+  //Global Scope - Defining a variable Outside a Function 
+  //Accessibility - Inside any Funtion
+  console.log(email);
+  // Automatic Global Scope - Defining a variable declaration outside a funciton, but assgning value inside a function
+  //Accessibility - Inside any Funtion
+  future_value = "Generated result";
+}
+
+function printName(){
+  console.log(name) // Does not print value
+  console.log(email); // print value
+  console.log(future_value);  //print value
+}
+
+//Error Handling
+function calculate(){
+  try{
+    var value_1 = prompt("Enter number value 1");
+    var number_1 = parseInt(value_1);
+
+    var value_2 = prompt("Enter number value 2");
+    var number_2 = parseInt(value_2);
+    
+    var symbol = prompt("Enter any math operator");
+
+    switch(symbol){
+      case "+":
+        console.log(number_1 + number_3);
+        break;
+      case "-":
+        console.log(number_1 - number_2);
+        break;
+      case "*":
+        console.log(number_1 * number_2);
+        break;
+      case "/":
+        console.log(number_1 / number_2);
+        break;
+      default: 
+        console.log("You have entered an wrong math operator");
+    }
+  }
+  catch(error){
+    console.log(error);
+    alert("Server down, pls try again later");
+  }
+
+}
