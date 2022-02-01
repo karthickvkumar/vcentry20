@@ -392,3 +392,41 @@ function calculate(){
   }
 
 }
+
+// Local Storage -> Set a new value, Read a value, Delete particular value, n
+// syntax -> Set a new value
+// localStorage.setItem("key", "value")
+localStorage.setItem("username", "Karthick@gmail.com")
+
+// syntax -> Read a value
+// localStorage.getItem("key");
+localStorage.getItem("username")
+
+//syntax - Remove a particular value
+//localStorage.removeItem(key);
+localStorage.removeItem("username");
+
+//syntax - To clear all values
+localStorage.clear();
+
+//To convert an Object or Array to String Value
+//JSON.stringify(Object or Array Value);
+
+//To convert an String Format Object or Array to Actual Value
+//JSON.parse(stringObject)
+
+// Session Storage -> Set a new value, Read a value, Delete particular value, n
+// syntax -> Set a new value
+// sessionStorage.setItem("key", "value")
+sessionStorage.setItem("username", "Karthick@gmail.com")
+
+// syntax -> Read a value
+// sessionStorage.getItem("key");
+sessionStorage.getItem("username")
+
+//syntax - Remove a particular value
+//sessionStorage.removeItem(key);
+sessionStorage.removeItem("username");
+
+//syntax - To clear all values
+sessionStorage.clear();

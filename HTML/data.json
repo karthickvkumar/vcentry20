@@ -1,0 +1,9 @@
+{
+  "name" : "Karthick",
+  "age" : 27,
+  "result" : true,
+  "address" : {
+    "door_no" : 12,
+    "street": "sdfsdf"
+  }
+}
