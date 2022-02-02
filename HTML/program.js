@@ -430,3 +430,45 @@ sessionStorage.removeItem("username");
 
 //syntax - To clear all values
 sessionStorage.clear();
+
+//Timers
+/*
+setTimeout - Its used to delay the code excution
+syntax:
+setTimeout(function(){
+  code to time delay
+}, time_millisecond);
+
+1000 ms -> 1 second
+*/
+
+var homePageTimeout = setTimeout(function(){
+  alert("Welcome to Home Page");
+}, 1000 * 5);
+
+
+// clearTimeout -> It will stop the setTimeout
+// clearTimeout(setTimeoutID);
+
+function clearSetTimeout(){
+  clearTimeout(homePageTimeout);
+}
+
+/*
+setInterval -> It is used to run a code on the given time interval
+syntax:
+setInterval(function(){
+  // code to be excuted on a time interval
+}, time_millisecond);
+*/
+
+var homePageTimeInterval = setInterval(function(){
+ alert("It will call continiously for every 4 second")
+}, 4000);
+
+// clearInterval -> It will stop the time interval
+// clearInterval(setIntervalID);
+
+function clearTimeInterval(){
+  clearInterval(homePageTimeInterval);
+}
