@@ -472,3 +472,24 @@ var homePageTimeInterval = setInterval(function(){
 function clearTimeInterval(){
   clearInterval(homePageTimeInterval);
 }
+
+class Authentication{
+  login(){
+   console.log("This is login code")
+  }
+
+ register(){
+  console.log("This is a Register code")
+ }
+
+}
+
+var auth = new Authentication()
+auth.login();
+
+class HomePage extends Authentication{
+
+}
+
+var home = new HomePage();
+home.login();
