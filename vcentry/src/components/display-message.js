@@ -35,6 +35,15 @@ class DisplayMessage extends Component {
     });
   }
 
+  onLogin(){
+    let result = {
+      username : this.state.userName,
+      password : this.state.password
+    };
+
+    console.log(result)
+  }
+
   render(){
     return(
       <div>
@@ -51,6 +60,9 @@ class DisplayMessage extends Component {
         <label>Enter your Password :</label>
         {/* on Change - Type 2 */}
         <input className="inputBox" type="password" placeholder="Enter your Password.." onChange={this.readInputPropertyMethod}/>
+        <br></br>
+        <button onClick={() => this.onLogin()}>LOGIN</button>
+
         <br></br>
         <h2>The username is {this.state.userName}</h2>
         <h2>The password is {this.state.password}</h2>
