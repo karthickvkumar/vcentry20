@@ -5,7 +5,9 @@ class DisplayMessage extends Component {
   constructor(props){
     super(props);
     this.state = {
-      message : "hello"
+      message : "hello",
+      userName : "",
+      password : ""
     }
   }
 
@@ -20,11 +22,17 @@ class DisplayMessage extends Component {
   //On Change - Type 1
   readInputBox(event){
     console.log(event.target.value)
+    this.setState({
+      userName : event.target.value
+    });
   }
 
   //On Change - Type 2 (Property method)
   readInputPropertyMethod = (event) => {
     console.log(event.target.value)
+    this.setState({
+      password : event.target.value
+    });
   }
 
   render(){
@@ -43,6 +51,9 @@ class DisplayMessage extends Component {
         <label>Enter your Password :</label>
         {/* on Change - Type 2 */}
         <input className="inputBox" type="password" placeholder="Enter your Password.." onChange={this.readInputPropertyMethod}/>
+        <br></br>
+        <h2>The username is {this.state.userName}</h2>
+        <h2>The password is {this.state.password}</h2>
       </div>
     )
   }
