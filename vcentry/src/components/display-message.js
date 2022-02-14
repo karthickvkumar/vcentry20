@@ -2,9 +2,19 @@ import React, {Component} from "react";
 
 class DisplayMessage extends Component {
 
+  constructor(props){
+    super(props);
+    this.state = {
+      message : "hello"
+    }
+  }
+
   display(){
-    let message = "Welcome to Display Message method";
-    console.log(message);
+    let text = "Welcome to Display Message method";
+    console.log(text);
+    this.setState({
+      message : text
+    });
   }
 
   //On Change - Type 1
@@ -21,6 +31,8 @@ class DisplayMessage extends Component {
     return(
       <div>
         <h1>Hi, this is display message</h1>
+        <h2>{this.state.message}</h2>
+
         <button onClick={() => this.display() }>Print Message</button>
         <br></br>
         <label>Enter your UserName :</label>
