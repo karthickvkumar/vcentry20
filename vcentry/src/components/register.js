@@ -11,17 +11,25 @@ class RegisterPage extends Component {
       password: "",
       date_of_birth: "",
       gender: "",
-      hobbies: "",
+      hobbies: [],
       address : "",
       city : ""
     }
   }
 
   onHandleInput = (event) => {
-    // console.log(event.target.value)
-    this.setState({
-      [event.target.name] : event.target.value      
-    })
+    if(event.target.name == "hobbies"){
+      console.log(event.target.checked)
+      this.state.hobbies.push(event.target.value);
+      this.setState({
+        hobbies : this.state.hobbies
+      })
+    }
+    else{
+      this.setState({
+        [event.target.name] : event.target.value      
+      })
+    }
   } 
 
   onCreateAccount(){
