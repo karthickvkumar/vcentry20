@@ -19,8 +19,16 @@ class RegisterPage extends Component {
 
   onHandleInput = (event) => {
     if(event.target.name == "hobbies"){
-      console.log(event.target.checked)
-      this.state.hobbies.push(event.target.value);
+      if(event.target.checked){
+        this.state.hobbies.push(event.target.value);
+      }
+      else{
+        let index = this.state.hobbies.findIndex((value) => {
+          return value == event.target.value;
+        });
+        this.state.hobbies.splice(index, 1);
+      }
+      
       this.setState({
         hobbies : this.state.hobbies
       })
