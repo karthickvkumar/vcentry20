@@ -84,6 +84,17 @@ class DisplayMessage extends Component {
             <h2>The username is {this.state.userName}</h2>
             <h2>The password is {this.state.password}</h2>
           </div>}
+
+       { this.state.isMessageVisible ?  
+          <div>
+            <h2>Image from file system</h2>
+            <img src={require("../images/shinchu.jpg")} className="img"/>
+          </div>
+          :
+          <div>
+            <h2>Image from Online</h2>
+            <img src="https://imageio.forbes.com/specials-images/imageserve/5d35eacaf1176b0008974b54/0x0.jpg?format=jpg&crop=4560,2565,x790,y784,safe&fit=crop" className="img"/>
+          </div>}
         
       </div>
     )
