@@ -18,17 +18,17 @@ class RegisterPage extends Component {
   }
 
   onHandleInput = (event) => {
-    if(event.target.name == "hobbies"){
+    if(event.target.name === "hobbies"){
       if(event.target.checked){
         this.state.hobbies.push(event.target.value);
       }
       else{
         let index = this.state.hobbies.findIndex((value) => {
-          return value == event.target.value;
+          return value === event.target.value;
         });
         this.state.hobbies.splice(index, 1);
       }
-      
+
       this.setState({
         hobbies : this.state.hobbies
       })
@@ -45,9 +45,11 @@ class RegisterPage extends Component {
   }
 
   render() {
+    let name = "Karthick Kumar";
+
     return (
       <div>
-        <h1>Welcome to Register Page</h1>
+        <h1>Welcome to Register Page, {name}</h1>
         <div className="block-space">
           <label className="label-message">Please enter your First Name :</label>
           <input className="input-box" type="text" placeholder="Enter your First Name.." onChange={this.onHandleInput} name="first_name"/>

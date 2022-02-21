@@ -7,7 +7,8 @@ class DisplayMessage extends Component {
     this.state = {
       message : "hello",
       userName : "",
-      password : ""
+      password : "",
+      isMessageVisible : true
     }
   }
 
@@ -44,6 +45,18 @@ class DisplayMessage extends Component {
     console.log(result)
   }
 
+  showMessage(){
+    this.setState({
+      isMessageVisible : true
+    })
+  }
+
+  hideMessage(){
+    this.setState({
+      isMessageVisible : false
+    })
+  }
+
   render(){
     return(
       <div>
@@ -64,8 +77,14 @@ class DisplayMessage extends Component {
         <button onClick={() => this.onLogin()}>LOGIN</button>
 
         <br></br>
-        <h2>The username is {this.state.userName}</h2>
-        <h2>The password is {this.state.password}</h2>
+        <button onClick={() => this.showMessage()}>Show Message</button>
+        <button onClick={() => this.hideMessage()}>Hide Message</button>
+
+        { this.state.isMessageVisible &&  <div>
+            <h2>The username is {this.state.userName}</h2>
+            <h2>The password is {this.state.password}</h2>
+          </div>}
+        
       </div>
     )
   }
