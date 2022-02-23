@@ -77,8 +77,8 @@ class DisplayMessage extends Component {
         <button onClick={() => this.onLogin()}>LOGIN</button>
 
         <br></br>
-        <button  class="btn btn-primary" onClick={() => this.showMessage()}>Show Message</button>
-        <button  class="btn btn-danger" onClick={() => this.hideMessage()}>Hide Message</button>
+        <button className="btn btn-primary" onClick={() => this.showMessage()}>Show Message</button>
+        <button className="btn btn-danger" onClick={() => this.hideMessage()}>Hide Message</button>
 
         { this.state.isMessageVisible &&  <div>
             <h2>The username is {this.state.userName}</h2>
