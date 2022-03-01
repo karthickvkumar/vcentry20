@@ -2,8 +2,8 @@ import React, {Component} from "react";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 
 // import DisplayMessage from "./components/display-message";
-// import LoginPage from "./components/login";
-// import RegisterPage from "./components/register";
+import LoginPage from "./components/login";
+import RegisterPage from "./components/register";
 
 import HomePage from "./pages/home";
 import AboutPage from "./pages/about";
@@ -19,9 +19,11 @@ class App extends Component{
       <div>
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<HomePage></HomePage>}></Route>
+            <Route path="/" element={<LoginPage></LoginPage>}></Route>
+            <Route path="/home" element={<HomePage></HomePage>}></Route>
             <Route path="/about" element={<AboutPage></AboutPage>}></Route>
             <Route path="/contact" element={<ContactPage></ContactPage>}></Route>
+            <Route path="/signup" element={<RegisterPage></RegisterPage>}></Route>
           </Routes>
         </BrowserRouter>
       </div>

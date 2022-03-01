@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import { NavLink } from "react-router-dom";
 
 import "../css/login.css";
 
@@ -31,7 +32,14 @@ class LoginPage extends Component{
   }
 
   onLogin(){
-    console.log(this.state)
+
+    if(this.state.username !== "" && this.state.email !== "" && this.state.password !== ""){
+      return <NavLink to="/home"></NavLink>
+    }
+    else{
+      alert("Incorrect Form Input")
+    }
+    
   }
 
   render(){
