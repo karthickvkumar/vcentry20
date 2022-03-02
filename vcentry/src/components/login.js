@@ -34,7 +34,7 @@ class LoginPage extends Component{
   onLogin(){
 
     if(this.state.username !== "" && this.state.email !== "" && this.state.password !== ""){
-      return <NavLink to="/home"></NavLink>
+      // return <NavLink to="/home"></NavLink>
     }
     else{
       alert("Incorrect Form Input")
@@ -59,6 +59,8 @@ class LoginPage extends Component{
           <input className="input-box" type="password" placeholder="Enter your Password.." onChange={this.onHandleInput} name="password"/>
         </div>
         <button className="button" onClick={() => this.onLogin()}>Login</button>
+        <br></br>
+        <NavLink to="/mail/inbox">Go to MAIL PAGE</NavLink>
       </div>
     )
   }

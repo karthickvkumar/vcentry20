@@ -8,6 +8,11 @@ import RegisterPage from "./components/register";
 import HomePage from "./pages/home";
 import AboutPage from "./pages/about";
 import ContactPage from "./pages/contact";
+import MailPage from "./pages/mail";
+
+import InboxPage from "./pages/mail/inbox";
+import SentPage from "./pages/mail/sent";
+import TrashPage from "./pages/mail/trash";
 
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
@@ -24,6 +29,11 @@ class App extends Component{
             <Route path="/about" element={<AboutPage></AboutPage>}></Route>
             <Route path="/contact" element={<ContactPage></ContactPage>}></Route>
             <Route path="/signup" element={<RegisterPage></RegisterPage>}></Route>
+            <Route path="/mail" element={<MailPage></MailPage>}>
+              <Route path="inbox" element={<InboxPage></InboxPage>}></Route>
+              <Route path="sent" element={<SentPage></SentPage>}></Route>
+              <Route path="trash" element={<TrashPage></TrashPage>}></Route>
+            </Route>
           </Routes>
         </BrowserRouter>
       </div>
