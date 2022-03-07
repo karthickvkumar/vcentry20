@@ -9,13 +9,13 @@ class MailPage extends Component{
         <div className="wrapper">
           <div className="sidebar">
             <div className="top-space">
-              <NavLink to="/mail/inbox" className="btn btn-secondary" active="btn btn-primary">Go to Inbox Page</NavLink>
+              <NavLink to="/mail/inbox" className={({isActive }) => isActive  ? "btn btn-primary" : "btn btn-secondary"} >Go to Inbox Page</NavLink>
             </div>
             <div className="top-space">
-              <NavLink to="/mail/sent" className="btn btn-secondary" active="btn btn-primary">Go to Sent Page</NavLink>
+              <NavLink to="/mail/sent" className={({isActive }) => isActive  ? "btn btn-primary" : "btn btn-secondary"} >Go to Sent Page</NavLink>
             </div>
             <div className="top-space">
-              <NavLink to="/mail/trash" className="btn btn-secondary" active="btn btn-primary">Go to Trash Page</NavLink>
+              <NavLink to="/mail/trash" className={({isActive }) => isActive  ? "btn btn-primary" : "btn btn-secondary"} >Go to Trash Page</NavLink>
             </div>
           </div>
           <div className="content">
