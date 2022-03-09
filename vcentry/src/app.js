@@ -25,11 +25,11 @@ class App extends Component{
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<LoginPage></LoginPage>}></Route>
-            <Route path="/home" element={<HomePage></HomePage>}></Route>
-            <Route path="/about" element={<AboutPage></AboutPage>}></Route>
-            <Route path="/contact" element={<ContactPage></ContactPage>}></Route>
-            <Route path="/signup" element={<RegisterPage></RegisterPage>}></Route>
-            <Route path="/mail" element={<MailPage></MailPage>}>
+            <Route path="home" element={<HomePage></HomePage>}></Route>
+            <Route path="about" element={<AboutPage></AboutPage>}></Route>
+            <Route path="contact" element={<ContactPage></ContactPage>}></Route>
+            <Route path="signup" element={<RegisterPage></RegisterPage>}></Route>
+            <Route path="mail" element={<MailPage></MailPage>}>
               <Route path="inbox" element={<InboxPage></InboxPage>}></Route>
               <Route path="sent" element={<SentPage></SentPage>}></Route>
               <Route path="trash" element={<TrashPage></TrashPage>}></Route>
