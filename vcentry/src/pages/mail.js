@@ -9,7 +9,7 @@ class MailPage extends Component{
         <div className="wrapper">
           <div className="sidebar">
             <div className="top-space">
-              <NavLink to="/mail/inbox" className={({isActive }) => isActive  ? "btn btn-primary" : "btn btn-secondary"} >Go to Inbox Page</NavLink>
+              <NavLink to="/mail/inbox" className={({isActive}) => isActive ? "btn btn-primary" : "btn btn-secondary" }>Go to Inbox Page</NavLink>
             </div>
             <div className="top-space">
               <NavLink to="/mail/sent" className={({isActive }) => isActive  ? "btn btn-primary" : "btn btn-secondary"} >Go to Sent Page</NavLink>
