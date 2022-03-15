@@ -464,6 +464,7 @@ position: fixed;
 
 .single-product {
   overflow: hidden;
+  width: 195px;
 }
 .single-product:hover {}
 .single-product:hover .product-hover a.add-to-cart-link {top: 32%;}
@@ -473,6 +474,9 @@ position: fixed;
 
 .product-carousel {
   padding-top: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .latest-product .owl-nav {
   position: absolute;
@@ -700,7 +704,12 @@ width: 10px;
   margin: 10px 0 0;
 }
 
-.product-big-title-area {background: url(/src/images/crossword.png) repeat scroll 0 0 #5a88ca; height: 100px}
+.product-big-title-area {
+  background: url(/src/images/crossword.png) repeat scroll 0 0 #5a88ca; 
+  height: 100px;
+  position: relative;
+  top: 76px;
+}
 
 .product-bit-title h2 {
   font-family: raleway;
@@ -1360,4 +1369,12 @@ div.coupon input[type="text"] {
 .center-img{
   display: block;
   margin: auto;
+}
+
+.carousel {
+  padding-top: 80px;
+}
+
+a{
+  text-decoration: none;
 }
