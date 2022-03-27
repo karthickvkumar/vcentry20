@@ -1,14 +1,42 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
+import axios from "axios";
 import ProductComponent from "../components/product";
 
 const ShopPage = () => {
+
+  const [product, setProduct] = useState([]);
+
+  useEffect(() => {
+    loadProduct();
+  }, [])
+
+  const loadProduct = () => {
+    const url = "https://shop143.herokuapp.com/telebuy/api/products";
+    axios.get(url)
+      .then((response) => {
+        console.log(response)
+        setProduct(response.data);
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+  }
+
+  const productList = product.map((value, index) => {
+    return(
+      <div className="col-md-3 col-sm-6" key={index}>
+        <ProductComponent {...value}></ProductComponent>
+      </div>
+    )
+  })
+
   return(
     <div>
-      <div class="product-big-title-area">
-          <div class="container">
-              <div class="row">
-                  <div class="col-md-12">
-                      <div class="product-bit-title text-center">
+      <div className="product-big-title-area">
+          <div className="container">
+              <div className="row">
+                  <div className="col-md-12">
+                      <div className="product-bit-title text-center">
                           <h2>Smartphones</h2>
                       </div>
                   </div>
@@ -16,43 +44,12 @@ const ShopPage = () => {
           </div>
       </div>
 
-      <div class="single-product-area">
-        <div class="zigzag-bottom"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 col-sm-6">
-                  <ProductComponent></ProductComponent>
-                </div>
-              
-                <div class="col-md-3 col-sm-6">
-                  <ProductComponent></ProductComponent>
-                </div>
-
-                <div class="col-md-3 col-sm-6">
-                  <ProductComponent></ProductComponent>
-                </div>
-
-
-                <div class="col-md-3 col-sm-6">
-                  <ProductComponent></ProductComponent>
-                </div>
-
-                <div class="col-md-3 col-sm-6">
-                  <ProductComponent></ProductComponent>
-                </div>
-
-
-                <div class="col-md-3 col-sm-6">
-                  <ProductComponent></ProductComponent>
-                </div>
-
-                <div class="col-md-3 col-sm-6">
-                  <ProductComponent></ProductComponent>
-                </div>
-
-                <div class="col-md-3 col-sm-6">
-                  <ProductComponent></ProductComponent>
-                </div>
+      <div className="single-product-area">
+        <div className="zigzag-bottom"></div>
+        <div className="container">
+            <div className="row">
+                
+              {productList}
 
             </div>
         </div>

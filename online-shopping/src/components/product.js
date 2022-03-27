@@ -1,26 +1,26 @@
 import React from "react";
 
-const ProductComponent = () => {
+const ProductComponent = (props) => {
   return(
-    <div class="single-product">
-      <div class="product-f-image">
-        <img src={require("../images/product-1.jpg")} alt="" />
-        <div class="product-hover">
-          <a href="#" class="add-to-cart-link">
-            <i class="fa fa-shopping-cart"></i> Add to cart
+    <div className="single-product">
+      <div className="product-f-image">
+        <img src={props.image} alt="" />
+        <div className="product-hover">
+          <a href="#" className="add-to-cart-link">
+            <i className="fa fa-shopping-cart"></i> Add to cart
           </a>
-          <a href="single-product.html" class="view-details-link">
-            <i class="fa fa-link"></i> See details
+          <a href="single-product.html" className="view-details-link">
+            <i className="fa fa-link"></i> See details
           </a>
         </div>
       </div>
 
       <h2>
-        <a href="single-product.html">Samsung Galaxy s5- 2015</a>
+        <a href="single-product.html">{props.name}</a>
       </h2>
 
-      <div class="product-carousel-price">
-        <ins>$700.00</ins> <del>$100.00</del>
+      <div className="product-carousel-price">
+        <ins>{props.discount_price}</ins> <del>{props.actual_price}</del>
       </div>
     </div>
   )

@@ -565,7 +565,7 @@ const CheckoutPage = () => {
                               id="ship-to-different-address-checkbox"
                             />
                           </h3>
-                          <div class="shipping_address" style="display: block;">
+                          <div class="shipping_address" style={{display: "block"}}>
                             <p
                               id="shipping_country_field"
                               class="form-row form-row-wide address-field update_totals_on_change validate-required woocommerce-validated"
@@ -1040,7 +1040,7 @@ const CheckoutPage = () => {
 
                     <h3 id="order_review_heading">Your order</h3>
 
-                    <div id="order_review" style="position: relative;">
+                    <div id="order_review" style={{position: "relative"}}>
                       <table class="shop_table">
                         <thead>
                           <tr>
@@ -1130,7 +1130,7 @@ const CheckoutPage = () => {
                               Cheque Payment{" "}
                             </label>
                             <div
-                              style="display:none;"
+                              style={{position: "none"}}
                               class="payment_box payment_method_cheque"
                             >
                               <p>
@@ -1165,7 +1165,7 @@ const CheckoutPage = () => {
                               </a>
                             </label>
                             <div
-                              style="display:none;"
+                              style={{display: "none"}}
                               class="payment_box payment_method_paypal"
                             >
                               <p>
