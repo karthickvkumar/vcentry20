@@ -1,5 +1,6 @@
 import React from "react";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
+import {Provider} from "react-redux";
 
 import HomePage from "./pages/home";
 import ShopPage from "./pages/shop";
@@ -14,18 +15,23 @@ import "./css/font-awesome.min.css";
 import "./css/style.css";
 import "./css/responsive.css";
 
+import configureStore from "./redux/store/redux-store";
+const reduxStore = configureStore();
+
 const App = () => {
   return(
-    <BrowserRouter>
-      <HeaderComponent></HeaderComponent>
-      <Routes>
-        <Route path="/" element={<HomePage />}></Route>
-        <Route path="products" element={<ShopPage />}></Route>
-        <Route path="single-product" element={<SingleProductPage />}></Route>
-        <Route path="cart" element={<CartPage />}></Route>
-        <Route path="checkout" element={<CheckoutPage />}></Route>
-      </Routes>
-    </BrowserRouter>
+    <Provider store={reduxStore}>
+      <BrowserRouter>
+        <HeaderComponent></HeaderComponent>
+        <Routes>
+          <Route path="/" element={<HomePage />}></Route>
+          <Route path="products" element={<ShopPage />}></Route>
+          <Route path="single-product/:id" element={<SingleProductPage />}></Route>
+          <Route path="cart" element={<CartPage />}></Route>
+          <Route path="checkout" element={<CheckoutPage />}></Route>
+        </Routes>
+      </BrowserRouter>
+    </Provider>
   )
 }
 

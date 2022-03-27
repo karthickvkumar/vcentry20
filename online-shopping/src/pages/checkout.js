@@ -1,6 +1,24 @@
-import React from "react";
+import React, {useState} from "react";
 
 const CheckoutPage = () => {
+
+  const [checkoutForm, setCheckoutForm] = useState({
+    country : '',
+    first_name : '',
+    last_name: '',
+    company_name : '',
+    address : ''
+  })
+
+  const onHandleInput = (event) => {
+    setCheckoutForm({...checkoutForm, [event.target.name] : event.target.value})
+  }
+
+  const checkout = () => {
+    console.log(checkoutForm)
+  }
+
+
   return (
     <div>
       <div class="product-big-title-area">
@@ -75,7 +93,8 @@ const CheckoutPage = () => {
                             <select
                               class="country_to_state country_select"
                               id="billing_country"
-                              name="billing_country"
+                              name="country"
+                              onChange={onHandleInput}
                             >
                               <option value="">Select a country…</option>
                               <option value="AX">Åland Islands</option>
@@ -363,11 +382,11 @@ const CheckoutPage = () => {
                             </label>
                             <input
                               type="text"
-                              value=""
                               placeholder=""
                               id="billing_first_name"
-                              name="billing_first_name"
+                              name="first_name"
                               class="input-text "
+                              onChange={onHandleInput}
                             />
                           </p>
 
@@ -383,11 +402,11 @@ const CheckoutPage = () => {
                             </label>
                             <input
                               type="text"
-                              value=""
                               placeholder=""
                               id="billing_last_name"
-                              name="billing_last_name"
+                              name="last_name"
                               class="input-text "
+                              onChange={onHandleInput}
                             />
                           </p>
                           <div class="clear"></div>
@@ -401,11 +420,11 @@ const CheckoutPage = () => {
                             </label>
                             <input
                               type="text"
-                              value=""
                               placeholder=""
                               id="billing_company"
-                              name="billing_company"
+                              name="company_name"
                               class="input-text "
+                              onChange={onHandleInput}
                             />
                           </p>
 
@@ -421,11 +440,11 @@ const CheckoutPage = () => {
                             </label>
                             <input
                               type="text"
-                              value=""
                               placeholder="Street address"
-                              id="billing_address/_1"
-                              name="billing_address_1"
+                              id="billing_address"
+                              name="address"
                               class="input-text "
+                              onChange={onHandleInput}
                             />
                           </p>
 
@@ -1184,6 +1203,7 @@ const CheckoutPage = () => {
                             id="place_order"
                             name="woocommerce_checkout_place_order"
                             class="button alt"
+                            onClick={() => checkout()}
                           />
                         </div>
 

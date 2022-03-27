@@ -1,6 +1,61 @@
 import React from "react";
+import {useSelector} from "react-redux";
 
 const CartPage = () => {
+  const product = useSelector((state) => state.ProdcutReducer.products);
+ 
+  const cartList = product.map((value, index) => {
+    return(
+      <tr class="cart_item" key={index}>
+        <td class="product-remove">
+          <a title="Remove this item" class="remove" href="#">
+            X
+          </a>
+        </td>
+
+        <td class="product-thumbnail">
+          <a href="single-product.html">
+            <img
+              width="145"
+              height="145"
+              alt="poster_1_up"
+              class="shop_thumbnail"
+              src={value.image}
+            />
+          </a>
+        </td>
+
+        <td class="product-name">
+          <a href="single-product.html">{value.name}</a>
+        </td>
+
+        <td class="product-price">
+          <span class="amount">{value.discount_price}</span>
+        </td>
+
+        <td class="product-quantity">
+          <div class="quantity buttons_added">
+            <input type="button" class="minus" value="-" />
+            <input
+              type="number"
+              size="4"
+              class="input-text qty text"
+              title="Qty"
+              value="1"
+              min="0"
+              step="1"
+            />
+            <input type="button" class="plus" value="+" />
+          </div>
+        </td>
+
+        <td class="product-subtotal">
+          <span class="amount">£15.00</span>
+        </td>
+      </tr>
+    )
+  })
+
   return (
     <div>
       <div class="product-big-title-area">
@@ -35,53 +90,7 @@ const CartPage = () => {
                         </tr>
                       </thead>
                       <tbody>
-                        <tr class="cart_item">
-                          <td class="product-remove">
-                            <a title="Remove this item" class="remove" href="#">
-                              ×
-                            </a>
-                          </td>
-
-                          <td class="product-thumbnail">
-                            <a href="single-product.html">
-                              <img
-                                width="145"
-                                height="145"
-                                alt="poster_1_up"
-                                class="shop_thumbnail"
-                                src="img/product-thumb-2.jpg"
-                              />
-                            </a>
-                          </td>
-
-                          <td class="product-name">
-                            <a href="single-product.html">Ship Your Idea</a>
-                          </td>
-
-                          <td class="product-price">
-                            <span class="amount">£15.00</span>
-                          </td>
-
-                          <td class="product-quantity">
-                            <div class="quantity buttons_added">
-                              <input type="button" class="minus" value="-" />
-                              <input
-                                type="number"
-                                size="4"
-                                class="input-text qty text"
-                                title="Qty"
-                                value="1"
-                                min="0"
-                                step="1"
-                              />
-                              <input type="button" class="plus" value="+" />
-                            </div>
-                          </td>
-
-                          <td class="product-subtotal">
-                            <span class="amount">£15.00</span>
-                          </td>
-                        </tr>
+                        {cartList}
                         <tr>
                           <td class="actions" colspan="6">
                             <div class="coupon">
